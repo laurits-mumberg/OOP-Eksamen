@@ -1,4 +1,5 @@
 ﻿using System;
+using Line_system.Users;
 
 namespace Line_system
 {
@@ -6,7 +7,7 @@ namespace Line_system
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }

@@ -23,9 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b16221-f57d-4424-bb9f-b4b1d91e6dbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Line-system/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Line-system/Products/IProduct.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Line-system/Products/Product.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Line-system/Products/SeasonalProduct.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Line-system/Transactions/BuyTransaction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Line-system/Transactions/ITransaction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Line-system/Transactions/InsertCashTransaction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Line-system/Transactions/InsufficientCreditsException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Line-system/Transactions/Transaction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Users/User.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +48,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Line-system/User.cs" />
+        <option value="$PROJECT_DIR$/Line-system/IProduct.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Product.cs" />
+        <option value="$PROJECT_DIR$/Line-system/SeasonalProduct.cs" />
+        <option value="$PROJECT_DIR$/Line-system/ITransaction.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Transaction.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Products/Product.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Products/IProduct.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Transactions/ITransaction.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Users/User.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Program.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Transactions/Transaction.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Transactions/InsertCashTransaction.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Transactions/BuyTransaction.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Transactions/InsufficientCreditsException.cs" />
       </list>
     </option>
   </component>
@@ -85,13 +108,14 @@
       <option name="presentableId" value="Default" />
       <updated>1605883850910</updated>
       <workItem from="1605883866590" duration="2968000" />
+      <workItem from="1605956582297" duration="4310000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -103,6 +127,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -124,5 +149,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605884335278" />
+    <state x="788" y="205" key="RiderGenerateDialog" timestamp="1605957592731">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="788" y="205" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605957592731" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605957772865">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605957772865" />
   </component>
 </project>

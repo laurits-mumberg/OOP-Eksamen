@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Line_system
+namespace Line_system.Users
 {
     public class User : IComparable<User>
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Username { get; set; }
@@ -14,7 +14,7 @@ namespace Line_system
 
         public User(int id, string firstName, string lastName, string username, decimal balance, string email)
         {
-            Id = id;
+            ID = id;
             FirstName = firstName;
             LastName = lastName;
             Username = username;
@@ -29,7 +29,7 @@ namespace Line_system
 
         public int CompareTo(User otherUser)
         {
-            return this.Id - otherUser.Id;
+            return this.ID - otherUser.ID;
         }
 
         public override bool Equals(object? obj)
@@ -38,7 +38,7 @@ namespace Line_system
             {
                 User otherUser = (User)obj;
                 // As Id is uniques for each user, this should be enough to determine if they are equal.
-                return this.Id == otherUser.Id;
+                return this.ID == otherUser.ID;
             }
             else
             {
@@ -49,7 +49,7 @@ namespace Line_system
         public override int GetHashCode()
         {
             // TODO: Check om dette er en dårlig ide.
-            return this.Id;
+            return this.ID;
         }
     }
 }
