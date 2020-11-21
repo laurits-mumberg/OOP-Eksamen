@@ -10,7 +10,6 @@ namespace Line_system.Transactions
         public DateTime Date { get; }
         public decimal Amount { get; }
         
-        public void Execute(); 
-        public string ToString();
+        public void Execute();
     }
 }

@@ -7,5 +7,10 @@ namespace Line_system
     {
         public DateTime SeasonStartDate { get; }
         public DateTime SeasonEndDate { get; }
+        
+        public override string ToString()
+        {
+            return $"ID: {ID}, {Name}, {Price}";
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace Line_system.Transactions
         public IProduct Product { get; set; }
         
         // TODO: Fix
-        public BuyTransaction(int id, User user, DateTime date, decimal amount, IProduct product) : base(id, user, date, amount)
+        public BuyTransaction(User user, IProduct product) : base(user, product.Price * -1)
         {
             Product = product;
         }
@@ -25,13 +25,19 @@ namespace Line_system.Transactions
                 }
                 else
                 {
-                    // Throw 
+                    throw new InsufficientCreditsException($"{User} does not have enough to buy product: {Product}\n" +
+                                                           $"User balance is: {User.Balance}");
                 }
             }
             else
             {
                 //  TODO: Throw exception om at varen ikke er aktiv
             }
+        }
+
+        public override string ToString()
+        {
+            return $"BuyTransaction: {base.ToString()}, {Product}";
         }
     }
 }

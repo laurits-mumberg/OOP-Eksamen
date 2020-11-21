@@ -8,5 +8,10 @@
         public decimal Price { get; }
         public bool IsActive { get; }
         public bool CanBeBoughtOnCredit { get; }
+
+        public override string ToString()
+        {
+            return $"ID: {ID}, {Name}, {Price}";
+        }
     }
 }
