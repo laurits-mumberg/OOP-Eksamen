@@ -10,7 +10,7 @@ namespace Line_system.Transactions
         public IProduct Product { get; set; }
         
         // TODO: Fix
-        public BuyTransaction(User user, IProduct product) : base(user, product.Price * -1)
+        public BuyTransaction(IUser user, IProduct product) : base(user, product.Price * -1)
         {
             Product = product;
         }
@@ -25,8 +25,7 @@ namespace Line_system.Transactions
                 }
                 else
                 {
-                    throw new InsufficientCreditsException($"{User} does not have enough to buy product: {Product}\n" +
-                                                           $"User balance is: {User.Balance}");
+                    throw new InsufficientCreditsException($"({User}) does not have enough to buy product: ({Product}). User balance is: {User.Balance}");
                 }
             }
             else

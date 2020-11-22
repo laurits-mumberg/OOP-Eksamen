@@ -6,7 +6,7 @@ namespace Line_system.Transactions
     public class InsertCashTransaction : Transaction
     {
         // TODO: Gør noget bedre her
-        public InsertCashTransaction(User user, decimal amount) : base(user, amount)
+        public InsertCashTransaction(IUser user, decimal amount) : base(user, amount)
         {
         }
 

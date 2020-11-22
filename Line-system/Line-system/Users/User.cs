@@ -2,7 +2,7 @@
 
 namespace Line_system.Users
 {
-    public class User : IComparable<User>
+    public class User : IUser, IComparable<User>
     {
         public int ID { get; set; }
         public string FirstName { get; set; }

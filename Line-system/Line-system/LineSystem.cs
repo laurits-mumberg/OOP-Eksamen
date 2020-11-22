@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Line_system.Products;
 using Line_system.Transactions;
 using Line_system.Users;
@@ -9,11 +10,16 @@ namespace Line_system
 {
     public class LineSystem : ILineSystem
     {
-        public void BuyProduct(User user, Product product)
+        private List<IUser> Users { get; set; }
+        private List<ITransaction> Transactions { get; set; }
+        
+        public void BuyProduct(IUser user, IProduct product)
         {
+            BuyTransaction buyTransaction = new BuyTransaction(user, product);
+            
             try
             {
-                BuyTransaction buyTransaction = new BuyTransaction(user, product);
+                ExecuteTransaction(buyTransaction);
             }
             catch (Exception e)
             {
@@ -22,14 +28,15 @@ namespace Line_system
             }
         }
 
-        public void AddCreditsToAccount(User user, decimal amount)
+        public void AddCreditsToAccount(IUser user, decimal amount)
         {
-            throw new NotImplementedException();
+            InsertCashTransaction insertCashTransaction = new InsertCashTransaction(user, amount);
+            ExecuteTransaction(insertCashTransaction);
         }
 
-        public void ExecuteTransaction(Transaction transaction)
+        public void ExecuteTransaction(ITransaction transaction)
         {
-            throw new NotImplementedException();
+            transaction.Execute();
         }
 
         public Product GetProductByID(int id)
@@ -37,19 +44,22 @@ namespace Line_system
             throw new NotImplementedException();
         }
 
-        public List<User> GetUsers(Predicate<User> predicate)
+        public List<IUser> GetUsers(Predicate<IUser> predicate)
         {
-            throw new NotImplementedException();
+            return Users.FindAll(predicate);
         }
 
-        public User GetUserByUsername(string username)
+        public IUser GetUserByUsername(string username)
         {
-            throw new NotImplementedException();
+            return Users.Find(user => user.Username == username);
         }
 
-        public List<Transaction> GetTransactions(User user, int count)
+        public List<ITransaction> GetTransactions(IUser user, int count)
         {
-            throw new NotImplementedException();
+            return Transactions.FindAll(transaction => transaction.User == user)
+                .OrderBy((transaction => transaction.Date))
+                .Take(count)
+                .ToList();
         }
 
         public List<Product> ActiveProducts()

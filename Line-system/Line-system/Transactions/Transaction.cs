@@ -7,11 +7,11 @@ namespace Line_system.Transactions
 
     {
         public int ID { get; }
-        public User User { get; }
+        public IUser User { get; }
         public DateTime Date { get; }
         public decimal Amount { get; }
 
-        public Transaction(User user, decimal amount)
+        public Transaction(IUser user, decimal amount)
         {
             ID = 1; // TODO
             User = user;
