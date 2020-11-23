@@ -9,6 +9,14 @@
         public bool IsActive { get; }
         public bool CanBeBoughtOnCredit { get; }
 
+        public Product(int id, string name, decimal price, bool isActive)
+        {
+            ID = id;
+            Name = name;
+            Price = price;
+            IsActive = isActive;
+        }
+        
         public override string ToString()
         {
             return $"ID: {ID}, {Name}, {Price}";

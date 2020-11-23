@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Line_system.Users;
 
 namespace Line_system
@@ -7,7 +8,7 @@ namespace Line_system
     {
         static void Main(string[] args)
         {
-            
+            ILineSystem lineSystem = new LineSystem();
         }
     }
 }

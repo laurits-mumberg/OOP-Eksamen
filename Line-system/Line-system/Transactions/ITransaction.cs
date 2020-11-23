@@ -6,8 +6,6 @@ namespace Line_system.Transactions
 {
     public interface ITransaction
     {
-        private List<ITransaction> Transactions { get; set; }
-        
         public int ID { get; }
         public IUser User { get; }
         public DateTime Date { get; }

@@ -7,6 +7,13 @@ namespace Line_system
     {
         public DateTime SeasonStartDate { get; }
         public DateTime SeasonEndDate { get; }
+     
+        public SeasonalProduct(int id, string name, decimal price, bool isActive, DateTime seasonStartDate, DateTime seasonEndDate)
+            : base(id, name, price, isActive)
+        {
+            SeasonStartDate = seasonStartDate;
+            SeasonEndDate = seasonEndDate;
+        }
         
         public override string ToString()
         {

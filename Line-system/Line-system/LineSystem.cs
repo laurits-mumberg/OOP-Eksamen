@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using Line_system.CsvReading;
 using Line_system.Products;
 using Line_system.Transactions;
 using Line_system.Users;
@@ -10,8 +12,24 @@ namespace Line_system
 {
     public class LineSystem : ILineSystem
     {
-        private List<IUser> Users { get; set; }
-        private List<ITransaction> Transactions { get; set; }
+        private IEnumerable<IUser> Users { get; set; }
+        private IEnumerable<ITransaction> Transactions { get; set; }
+        private IEnumerable<IProduct> Products { get; set; }
+
+        public LineSystem()
+        {
+            Users = GetUserData(Path.Combine(Directory.GetCurrentDirectory(), "../../../../Data/users.csv"), ',');
+            foreach (IUser user in Users)
+            {
+                Console.WriteLine(user);
+            }
+
+            Products = GetProductData(Path.Combine(Directory.GetCurrentDirectory(), "../../../../Data/products.csv"), ';');
+            foreach (IProduct product in Products)
+            {
+                Console.WriteLine(product);
+            }
+        }
         
         public void BuyProduct(IUser user, IProduct product)
         {
@@ -44,27 +62,45 @@ namespace Line_system
             throw new NotImplementedException();
         }
 
-        public List<IUser> GetUsers(Predicate<IUser> predicate)
+        public IEnumerable<IUser> GetUsers(Predicate<IUser> predicate)
         {
-            return Users.FindAll(predicate);
+            return Users.Where(user => predicate(user));
         }
 
         public IUser GetUserByUsername(string username)
         {
-            return Users.Find(user => user.Username == username);
+            try
+            {
+                return Users.First(user => user.Username == username);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        public List<ITransaction> GetTransactions(IUser user, int count)
+        public IEnumerable<ITransaction> GetTransactions(IUser user, int count)
         {
-            return Transactions.FindAll(transaction => transaction.User == user)
+            return Transactions.Where(transaction => transaction.User == user)
                 .OrderBy((transaction => transaction.Date))
-                .Take(count)
-                .ToList();
+                .Take(count);
         }
 
-        public List<Product> ActiveProducts()
+        public IEnumerable<IProduct> ActiveProducts()
         {
-            throw new NotImplementedException();
+            return Products.Where(product => product.IsActive).ToList();
+        }
+
+        private List<IUser> GetUserData(string filePath, char separator)
+        {
+            CsvReaderContext<IUser> readerContext = new CsvReaderContext<IUser>(new UserReadStrategy());
+            return readerContext.ReadData(filePath, separator);
+        }
+        
+        private List<IProduct> GetProductData(string filePath, char separator)
+        {
+            CsvReaderContext<IProduct> readerContext = new CsvReaderContext<IProduct>(new ProductReadStrategy());
+            return readerContext.ReadData(filePath, separator);
         }
     }
 }

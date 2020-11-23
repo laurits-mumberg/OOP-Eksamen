@@ -15,9 +15,9 @@ namespace Line_system
         public void AddCreditsToAccount(IUser user, decimal amount);
         public void ExecuteTransaction(ITransaction transaction);
         public Product GetProductByID(int id);
-        public List<IUser> GetUsers(Predicate<IUser> predicate);
+        public IEnumerable<IUser> GetUsers(Predicate<IUser> predicate);
         public IUser GetUserByUsername(string username);
-        public List<ITransaction> GetTransactions(IUser user, int count);
-        public List<Product> ActiveProducts();
+        public IEnumerable<ITransaction> GetTransactions(IUser user, int count);
+        public IEnumerable<IProduct> ActiveProducts();
     }
 }

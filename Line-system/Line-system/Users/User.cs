@@ -49,7 +49,7 @@ namespace Line_system.Users
         public override int GetHashCode()
         {
             // TODO: Check om dette er en dårlig ide.
-            return this.ID;
+            return ID.GetHashCode();
         }
     }
 }

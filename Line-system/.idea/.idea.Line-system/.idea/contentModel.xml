@@ -15,6 +15,12 @@
     <e p="E:\uni\P3\oop\Eksamen\Line-system" t="IncludeFlat">
       <e p="Line-system" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="CsvReading" t="Include">
+          <e p="CsvReaderContext.cs" t="Include" />
+          <e p="ICsvReadStrategy.cs" t="Include" />
+          <e p="ProductReadStrategy.cs" t="Include" />
+          <e p="UserReadStrategy.cs" t="Include" />
+        </e>
         <e p="ILineSystem.cs" t="Include" />
         <e p="Line-system.csproj" t="IncludeRecursive" />
         <e p="LineSystem.cs" t="Include" />
@@ -37,6 +43,10 @@
           <e p="InsufficientCreditsException.cs" t="Include" />
           <e p="ITransaction.cs" t="Include" />
           <e p="Transaction.cs" t="Include" />
+        </e>
+        <e p="UI" t="Include">
+          <e p="ILineSystemUI.cs" t="Include" />
+          <e p="LineSystemUI.cs" t="Include" />
         </e>
         <e p="Users" t="Include">
           <e p="IUser.cs" t="Include" />
