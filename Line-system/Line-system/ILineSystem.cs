@@ -8,6 +8,7 @@ namespace Line_system
 {
     public interface ILineSystem
     {
+        public IEnumerable<IProduct> ActiveProducs { get; }
         public BuyTransaction BuyProduct(IUser user, IProduct product);
         public InsertCashTransaction AddCreditsToAccount(IUser user, decimal amount);
         public void ExecuteTransaction(ITransaction transaction);
@@ -15,7 +16,6 @@ namespace Line_system
         public IEnumerable<IUser> GetUsers(Predicate<IUser> predicate);
         public IUser GetUserByUsername(string username);
         public IEnumerable<ITransaction> GetTransactions(IUser user, int count);
-        public IEnumerable<IProduct> ActiveProducts();
         // TODO: event LineSystemEvent commandEntered;
     }
 }

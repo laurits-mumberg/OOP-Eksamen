@@ -23,15 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b16221-f57d-4424-bb9f-b4b1d91e6dbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Line-system/CsvReading/CsvReaderContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/CsvReading/CsvReaderContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Line-system/ILineSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/ILineSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Line-system/LineSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/LineSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Line-system/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Line-system/UI/LineSystemUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/UI/LineSystemUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +65,11 @@
         <option value="$PROJECT_DIR$/Line-system/CsvReading/ProductReadStrategy.cs" />
         <option value="$PROJECT_DIR$/NunitTests/LineSystemTest.cs" />
         <option value="$PROJECT_DIR$/Line-system/Program.cs" />
-        <option value="$PROJECT_DIR$/Line-system/ILineSystem.cs" />
-        <option value="$PROJECT_DIR$/Line-system/LineSystem.cs" />
         <option value="$PROJECT_DIR$/Line-system/CsvReading/CsvReaderContext.cs" />
         <option value="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" />
         <option value="$PROJECT_DIR$/Line-system/UI/LineSystemUI.cs" />
+        <option value="$PROJECT_DIR$/Line-system/LineSystem.cs" />
+        <option value="$PROJECT_DIR$/Line-system/ILineSystem.cs" />
         <option value="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" />
       </list>
     </option>
@@ -130,7 +124,7 @@
       <workItem from="1605973460394" duration="5614000" />
       <workItem from="1606063205114" duration="11852000" />
       <workItem from="1606140502746" duration="11725000" />
-      <workItem from="1606232662137" duration="14206000" />
+      <workItem from="1606232662137" duration="14952000" />
     </task>
     <servers />
   </component>
@@ -155,26 +149,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="261" key="GridCell.Tab.0.bottom" timestamp="1606253740897">
+    <state width="1877" height="261" key="GridCell.Tab.0.bottom" timestamp="1606253811940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="197" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606246994063" />
-    <state width="1877" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606253740897" />
-    <state width="1877" height="261" key="GridCell.Tab.0.center" timestamp="1606253740897">
+    <state width="1877" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606253811940" />
+    <state width="1877" height="261" key="GridCell.Tab.0.center" timestamp="1606253811940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="197" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606246994063" />
-    <state width="1877" height="261" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606253740897" />
-    <state width="1877" height="261" key="GridCell.Tab.0.left" timestamp="1606253740896">
+    <state width="1877" height="261" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606253811940" />
+    <state width="1877" height="261" key="GridCell.Tab.0.left" timestamp="1606253811940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="197" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606246994063" />
-    <state width="1877" height="261" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606253740896" />
-    <state width="1877" height="261" key="GridCell.Tab.0.right" timestamp="1606253740897">
+    <state width="1877" height="261" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606253811940" />
+    <state width="1877" height="261" key="GridCell.Tab.0.right" timestamp="1606253811940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="197" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606246994063" />
-    <state width="1877" height="261" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606253740897" />
+    <state width="1877" height="261" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606253811940" />
     <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1606253625409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -262,13 +256,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs</url>
-          <line>33</line>
+          <line>34</line>
           <properties documentPath="E:\uni\P3\oop\Eksamen\Line-system\Line-system\CLI\LineSystemCLI.cs" initialLine="34">
             <startOffsets>
-              <option value="1048" />
+              <option value="1182" />
             </startOffsets>
             <endOffsets>
-              <option value="1090" />
+              <option value="1182" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

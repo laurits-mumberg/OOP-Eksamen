@@ -15,6 +15,14 @@ namespace Line_system
         private IEnumerable<ITransaction> Transactions { get; set; }
         private IEnumerable<IProduct> Products { get; set; }
 
+        public IEnumerable<IProduct> ActiveProducs
+        {
+            get
+            {
+                return Products.Where(product => product.IsActive).ToList();
+            }
+        }
+
         public LineSystem()
         {
             Users = GetUserData(Path.Combine(Directory.GetCurrentDirectory(), "../../../../Data/users.csv"), ',');
@@ -77,11 +85,6 @@ namespace Line_system
             return Transactions.Where(transaction => transaction.User == user)
                 .OrderBy((transaction => transaction.Date))
                 .Take(count);
-        }
-
-        public IEnumerable<IProduct> ActiveProducts()
-        {
-            return Products.Where(product => product.IsActive).ToList();
         }
 
         private IEnumerable<IUser> GetUserData(string filePath, char separator)

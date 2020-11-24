@@ -20,6 +20,7 @@ namespace Line_system.CLI
 
             _adminCommands.Add(":quit", (argv) => _lineSystemUi.Close());
             _adminCommands.Add(":q", (argv) => _lineSystemUi.Close());
+            _adminCommands.Add(":activate", (argv) => lineSystem.GetProductByID(int.Parse(argv[1])).// TODO Lav en func til det her);
             
             _lineSystemUi.CommandEntered += ParseCommand;
             _lineSystemUi.Start();
