@@ -6,7 +6,7 @@
         public int ID { get; }
         public string Name { get; }
         public decimal Price { get; }
-        public bool IsActive { get; }
+        public bool IsActive { get; set; }
         public bool CanBeBoughtOnCredit { get; }
 
         public Product(int id, string name, decimal price, bool isActive)

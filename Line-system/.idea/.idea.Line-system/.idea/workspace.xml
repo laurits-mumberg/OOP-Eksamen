@@ -24,8 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="01b16221-f57d-4424-bb9f-b4b1d91e6dbc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Line-system/ILineSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/ILineSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Line-system/LineSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/LineSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/Products/IProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Products/IProduct.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/Products/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Products/Product.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,6 @@
         <option value="$PROJECT_DIR$/Line-system/ITransaction.cs" />
         <option value="$PROJECT_DIR$/Line-system/Transaction.cs" />
         <option value="$PROJECT_DIR$/Line-system/Transactions/InsufficientCreditsException.cs" />
-        <option value="$PROJECT_DIR$/Line-system/Products/IProduct.cs" />
         <option value="$PROJECT_DIR$/NunitTests/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/Line-system/Transactions/InsertCashTransaction.cs" />
         <option value="$PROJECT_DIR$/Line-system/Transactions/Transaction.cs" />
@@ -60,16 +59,17 @@
         <option value="$PROJECT_DIR$/Line-system/CsvReaderContext.cs" />
         <option value="$PROJECT_DIR$/Line-system/CsvReading/ICsvReadStrategy.cs" />
         <option value="$PROJECT_DIR$/Line-system/CsvReading/UserReadStrategy.cs" />
-        <option value="$PROJECT_DIR$/Line-system/Products/Product.cs" />
         <option value="$PROJECT_DIR$/Line-system/Products/SeasonalProduct.cs" />
         <option value="$PROJECT_DIR$/Line-system/CsvReading/ProductReadStrategy.cs" />
         <option value="$PROJECT_DIR$/NunitTests/LineSystemTest.cs" />
         <option value="$PROJECT_DIR$/Line-system/Program.cs" />
         <option value="$PROJECT_DIR$/Line-system/CsvReading/CsvReaderContext.cs" />
-        <option value="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" />
         <option value="$PROJECT_DIR$/Line-system/UI/LineSystemUI.cs" />
         <option value="$PROJECT_DIR$/Line-system/LineSystem.cs" />
         <option value="$PROJECT_DIR$/Line-system/ILineSystem.cs" />
+        <option value="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Products/Product.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Products/IProduct.cs" />
         <option value="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" />
       </list>
     </option>
@@ -124,7 +124,7 @@
       <workItem from="1605973460394" duration="5614000" />
       <workItem from="1606063205114" duration="11852000" />
       <workItem from="1606140502746" duration="11725000" />
-      <workItem from="1606232662137" duration="14952000" />
+      <workItem from="1606232662137" duration="15447000" />
     </task>
     <servers />
   </component>
@@ -256,13 +256,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs</url>
-          <line>34</line>
+          <line>35</line>
           <properties documentPath="E:\uni\P3\oop\Eksamen\Line-system\Line-system\CLI\LineSystemCLI.cs" initialLine="34">
             <startOffsets>
-              <option value="1182" />
+              <option value="1287" />
             </startOffsets>
             <endOffsets>
-              <option value="1182" />
+              <option value="1287" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
