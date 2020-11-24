@@ -6,7 +6,6 @@ using Line_system.CsvReading;
 using Line_system.Products;
 using Line_system.Transactions;
 using Line_system.Users;
-using Transaction = System.Transactions.Transaction;
 
 namespace Line_system
 {
@@ -19,19 +18,11 @@ namespace Line_system
         public LineSystem()
         {
             Users = GetUserData(Path.Combine(Directory.GetCurrentDirectory(), "../../../../Data/users.csv"), ',');
-            foreach (IUser user in Users)
-            {
-                Console.WriteLine(user);
-            }
 
             Products = GetProductData(Path.Combine(Directory.GetCurrentDirectory(), "../../../../Data/products.csv"), ';');
-            foreach (IProduct product in Products)
-            {
-                Console.WriteLine(product);
-            }
         }
         
-        public void BuyProduct(IUser user, IProduct product)
+        public BuyTransaction BuyProduct(IUser user, IProduct product)
         {
             BuyTransaction buyTransaction = new BuyTransaction(user, product);
             
@@ -44,12 +35,14 @@ namespace Line_system
                 Console.WriteLine(e);
                 throw;
             }
+            return buyTransaction;
         }
 
-        public void AddCreditsToAccount(IUser user, decimal amount)
+        public InsertCashTransaction AddCreditsToAccount(IUser user, decimal amount)
         {
             InsertCashTransaction insertCashTransaction = new InsertCashTransaction(user, amount);
             ExecuteTransaction(insertCashTransaction);
+            return insertCashTransaction;
         }
 
         public void ExecuteTransaction(ITransaction transaction)
@@ -57,9 +50,9 @@ namespace Line_system
             transaction.Execute();
         }
 
-        public Product GetProductByID(int id)
+        public IProduct GetProductByID(int id)
         {
-            throw new NotImplementedException();
+            return Products.First(product => product.ID == id);
         }
 
         public IEnumerable<IUser> GetUsers(Predicate<IUser> predicate)
@@ -91,13 +84,13 @@ namespace Line_system
             return Products.Where(product => product.IsActive).ToList();
         }
 
-        private List<IUser> GetUserData(string filePath, char separator)
+        private IEnumerable<IUser> GetUserData(string filePath, char separator)
         {
             CsvReaderContext<IUser> readerContext = new CsvReaderContext<IUser>(new UserReadStrategy());
             return readerContext.ReadData(filePath, separator);
         }
         
-        private List<IProduct> GetProductData(string filePath, char separator)
+        private IEnumerable<IProduct> GetProductData(string filePath, char separator)
         {
             CsvReaderContext<IProduct> readerContext = new CsvReaderContext<IProduct>(new ProductReadStrategy());
             return readerContext.ReadData(filePath, separator);

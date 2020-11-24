@@ -13,12 +13,11 @@ namespace Line_system.CsvReading
             _readStrategy = readStrategy;
         }
 
-        public List<T> ReadData(string filepath, char separator)
+        public IEnumerable<T> ReadData(string filepath, char separator)
         {
             return File.ReadLines(filepath)
                 .Skip(1)
-                .Select(line =>_readStrategy.ReadCsvLine(line, separator))
-                .ToList();
+                .Select(line => _readStrategy.ReadCsvLine(line, separator));
         }
     }
 }

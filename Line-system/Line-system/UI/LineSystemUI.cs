@@ -6,7 +6,6 @@ using Line_system.Users;
 namespace Line_system.UI
 {
     public class LineSystemUI : ILineSystemUI
-
     {
         public void DisplayUserNotFound(string username)
         {
@@ -48,7 +47,7 @@ namespace Line_system.UI
             Console.WriteLine("Should close program");// TODO: Luk lortet
         }
 
-        public void DisplayInsufficientCash(User user, Product product)
+        public void DisplayInsufficientCash(IUser user, IProduct product)
         {
             Console.WriteLine($"({user}) has insufficient balance to buy: {product}\n" +
                               $"({user} has a balance of: {user.Balance})");
@@ -61,7 +60,12 @@ namespace Line_system.UI
 
         public void Start()
         {
-            Console.WriteLine("AAU LINE SYSTEM COMMAND DUMP");
+            Console.WriteLine("Write a command:");
+            string command = Console.ReadLine();
+            CommandEntered?.Invoke(command);
         }
+
+        public delegate void CommandEventHandler(string command);
+        public event ILineSystemUI.CommandEventHandler CommandEntered;
     }
 }

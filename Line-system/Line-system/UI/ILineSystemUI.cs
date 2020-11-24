@@ -1,11 +1,16 @@
-﻿using Line_system.Products;
+﻿using System;
+using Line_system.Products;
 using Line_system.Transactions;
 using Line_system.Users;
+using NUnit.Framework.Internal.Execution;
 
 namespace Line_system.UI
 {
     public interface ILineSystemUI
     {
+        public delegate void CommandEventHandler(string command);
+        public event CommandEventHandler CommandEntered;
+        
         void DisplayUserNotFound(string username);
         void DisplayProductNotFound(string product);
         void DisplayUserInfo(User user);
@@ -14,10 +19,8 @@ namespace Line_system.UI
         void DisplayUserBuysProduct(BuyTransaction transaction);
         void DisplayUserBuysProduct(int count, BuyTransaction transaction);
         void Close();
-        void DisplayInsufficientCash(User user, Product product);
+        void DisplayInsufficientCash(IUser user, IProduct product);
         void DisplayGeneralError(string errorString);
         void Start();
-        // TODO event StregsystemEvent CommandEntered;
-
     }
 }
