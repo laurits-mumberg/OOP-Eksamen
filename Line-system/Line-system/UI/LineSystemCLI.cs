@@ -17,7 +17,7 @@ namespace Line_system.UI
             Console.WriteLine("Product not found");
         }
 
-        public void DisplayUserInfo(User user)
+        public void DisplayUserInfo(IUser user)
         {
             Console.WriteLine($"{user}\nBalance: {user.Balance}"); 
         }

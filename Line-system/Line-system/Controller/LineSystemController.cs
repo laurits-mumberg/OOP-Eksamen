@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Line_system.Products;
 using Line_system.Transactions;
 using Line_system.UI;
@@ -35,20 +36,28 @@ namespace Line_system.CLI
         {
             string[] args = command.Split(" ");
 
-            if (IsAdminCommand(args))
+            try
             {
-                _adminCommands[args[0]](args);
+                if (IsAdminCommand(args))
+                {
+                    _adminCommands[args[0]](args);
+
+                }
+                else
+                {
+                    if (args.Length == 1)
+                    {
+                        DisplayUserInfo(args);
+                    }
+                    else if (args.Length > 1)
+                    {
+                        UserBuyProducts(args);
+                    }
+                }
             }
-            else
+            catch(Exception e)
             {
-                try
-                {
-                    UserBuyProducts(args);
-                }
-                catch
-                {
-                    //TODO
-                }
+                _lineSystemUi.DisplayGeneralError(e.Message);
             }
             _lineSystemUi.Start();
         }
@@ -58,6 +67,11 @@ namespace Line_system.CLI
             return args[0][0] == ':';
         }
 
+        private void DisplayUserInfo(string[] args)
+        {
+            _lineSystemUi.DisplayUserInfo(_lineSystem.GetUserByUsername(args[0]));
+        }
+        
         private void UserBuyProducts(string[] args)
         {
             IUser user = _lineSystem.GetUserByUsername(args[0]);

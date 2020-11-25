@@ -8,8 +8,8 @@ namespace Line_system
         public DateTime SeasonStartDate { get; }
         public DateTime SeasonEndDate { get; }
      
-        public SeasonalProduct(int id, string name, decimal price, bool isActive, DateTime seasonStartDate, DateTime seasonEndDate)
-            : base(id, name, price, isActive)
+        public SeasonalProduct(int id, string name, decimal price, bool isActive, bool canBeBoughtOnCredit, DateTime seasonStartDate, DateTime seasonEndDate)
+            : base(id, name, price, isActive, canBeBoughtOnCredit)
         {
             SeasonStartDate = seasonStartDate;
             SeasonEndDate = seasonEndDate;

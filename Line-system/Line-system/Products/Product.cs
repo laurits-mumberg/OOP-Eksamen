@@ -9,12 +9,13 @@
         public bool IsActive { get; set; }
         public bool CanBeBoughtOnCredit { get; set; }
 
-        public Product(int id, string name, decimal price, bool isActive)
+        public Product(int id, string name, decimal price, bool isActive, bool canBeBoughtOnCredit)
         {
             ID = id;
             Name = name;
             Price = price;
             IsActive = isActive;
+            CanBeBoughtOnCredit = canBeBoughtOnCredit;
         }
         
         public override string ToString()

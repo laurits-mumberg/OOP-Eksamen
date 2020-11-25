@@ -1,20 +1,20 @@
 ﻿using System;
 
-namespace Line_system.Transactions
+namespace Line_system.Products
 {
-    public class InsufficientCreditsException : Exception
+    public class ProductNotActiveException : Exception
     {
         // Taken from https://docs.microsoft.com/en-us/dotnet/standard/exceptions/how-to-create-user-defined-exceptions
-        public InsufficientCreditsException()
+        public ProductNotActiveException()
         {
         }
 
-        public InsufficientCreditsException(string message)
+        public ProductNotActiveException(string message)
             : base(message)
         {
         }
 
-        public InsufficientCreditsException(string message, Exception inner)
+        public ProductNotActiveException(string message, Exception inner)
             : base(message, inner)
         {
         }

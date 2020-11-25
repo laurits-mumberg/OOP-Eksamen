@@ -13,7 +13,8 @@ namespace Line_system.CsvReading
                 int.Parse(csvFields[0]),
                 Regex.Replace(csvFields[1],"<[^>]*>",""), // Removes html-tags
                 decimal.Parse(csvFields[2]),
-                parseActive(int.Parse(csvFields[3])));
+                parseActive(int.Parse(csvFields[3])),
+                true); //Info regarding buying on credit does not exist in csv file.
         }
         
         private bool parseActive(int i)

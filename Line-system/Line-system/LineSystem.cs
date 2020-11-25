@@ -5,6 +5,7 @@ using System.Linq;
 using Line_system.CsvReading;
 using Line_system.Products;
 using Line_system.Transactions;
+using Line_system.UI;
 using Line_system.Users;
 
 namespace Line_system
@@ -25,24 +26,16 @@ namespace Line_system
 
         public LineSystem()
         {
-            Users = GetUserData(Path.Combine(Directory.GetCurrentDirectory(), "../../../../Data/users.csv"), ',');
+            Users = GetUserData(Path.Combine(Directory.GetCurrentDirectory(), "../../../../Data/users.csv"), ',').ToList();
 
-            Products = GetProductData(Path.Combine(Directory.GetCurrentDirectory(), "../../../../Data/products.csv"), ';');
+            Products = GetProductData(Path.Combine(Directory.GetCurrentDirectory(), "../../../../Data/products.csv"), ';').ToList();
         }
         
         public BuyTransaction BuyProduct(IUser user, IProduct product)
         {
             BuyTransaction buyTransaction = new BuyTransaction(user, product);
+            ExecuteTransaction(buyTransaction);
             
-            try
-            {
-                ExecuteTransaction(buyTransaction);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
             return buyTransaction;
         }
 
@@ -60,7 +53,14 @@ namespace Line_system
 
         public IProduct GetProductByID(int id)
         {
-            return Products.First(product => product.ID == id);
+            try
+            {
+                return Products.First(product => product.ID == id);
+            }
+            catch
+            {
+                throw new ProductNotFoundException(id.ToString());
+            }
         }
 
         public IEnumerable<IUser> GetUsers(Predicate<IUser> predicate)
@@ -70,13 +70,14 @@ namespace Line_system
 
         public IUser GetUserByUsername(string username)
         {
+
             try
             {
                 return Users.First(user => user.Username == username);
             }
             catch
             {
-                return null;
+                throw new UserNotFoundException(username);
             }
         }
 

@@ -19,6 +19,7 @@ namespace Line_system.Transactions
         {
             if (Product.IsActive)
             {
+               
                 if (User.Balance - Product.Price >= 0 || Product.CanBeBoughtOnCredit)
                 {
                     User.Balance -= Product.Price;
@@ -30,7 +31,7 @@ namespace Line_system.Transactions
             }
             else
             {
-                //  TODO: Throw exception om at varen ikke er aktiv
+                throw new ProductNotFoundException($"Product with id: {Product.ID} is not active");
             }
         }
 
