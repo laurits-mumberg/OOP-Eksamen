@@ -22,6 +22,10 @@ namespace Line_system.CLI
             _adminCommands.Add(":q", (argv) => _lineSystemUi.Close());
             _adminCommands.Add(":activate", (argv) => lineSystem.GetProductByID(int.Parse(argv[1])).IsActive = true);
             _adminCommands.Add(":deactivate", (argv) => lineSystem.GetProductByID(int.Parse(argv[1])).IsActive = false);
+            _adminCommands.Add(":crediton", (argv) => lineSystem.GetProductByID(int.Parse(argv[1])).CanBeBoughtOnCredit = true);
+            _adminCommands.Add(":creditoff", (argv) => lineSystem.GetProductByID(int.Parse(argv[1])).CanBeBoughtOnCredit = false);
+            _adminCommands.Add(":addcredits", (argv) => new InsertCashTransaction(
+                lineSystem.GetUserByUsername(argv[1]), decimal.Parse(argv[2])).Execute());
             
             _lineSystemUi.CommandEntered += ParseCommand;
             _lineSystemUi.Start();

@@ -23,7 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b16221-f57d-4424-bb9f-b4b1d91e6dbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/ILineSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/ILineSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/LineSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/LineSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Line-system/Products/IProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Products/IProduct.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Line-system/Products/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Products/Product.cs" afterDir="false" />
     </list>
@@ -34,6 +37,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -68,8 +75,8 @@
         <option value="$PROJECT_DIR$/Line-system/LineSystem.cs" />
         <option value="$PROJECT_DIR$/Line-system/ILineSystem.cs" />
         <option value="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" />
-        <option value="$PROJECT_DIR$/Line-system/Products/Product.cs" />
         <option value="$PROJECT_DIR$/Line-system/Products/IProduct.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Products/Product.cs" />
         <option value="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" />
       </list>
     </option>
@@ -91,7 +98,7 @@
     <property name="XThreadsFramesViewSplitterKey" value="0.4205729" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.Line-system">
+  <component name="RunManager">
     <configuration name="Line-system" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -125,6 +132,7 @@
       <workItem from="1606063205114" duration="11852000" />
       <workItem from="1606140502746" duration="11725000" />
       <workItem from="1606232662137" duration="15447000" />
+      <workItem from="1606316030735" duration="1056000" />
     </task>
     <servers />
   </component>
@@ -256,16 +264,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs</url>
-          <line>35</line>
-          <properties documentPath="E:\uni\P3\oop\Eksamen\Line-system\Line-system\CLI\LineSystemCLI.cs" initialLine="34">
+          <line>42</line>
+          <properties documentPath="E:\uni\P3\oop\Eksamen\Line-system\Line-system\CLI\LineSystemCLI.cs" initialLine="38">
             <startOffsets>
-              <option value="1287" />
+              <option value="1785" />
             </startOffsets>
             <endOffsets>
-              <option value="1287" />
+              <option value="1786" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
