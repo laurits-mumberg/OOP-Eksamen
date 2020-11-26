@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using Line_system.Products;
 
 namespace Line_system.CsvReading
@@ -19,13 +20,14 @@ namespace Line_system.CsvReading
         
         private bool parseActive(int i)
         {
-            if (i == 1)
+            switch (i)
             {
-                return true;
-            }
-            else
-            {
-                return false;
+                case 1:
+                    return true;
+                case 0:
+                    return false;
+                default:
+                    throw new FormatException();
             }
         }
     }

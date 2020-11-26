@@ -1,4 +1,5 @@
-﻿using Line_system.Transactions;
+﻿using System.Text.RegularExpressions;
+using Line_system.Transactions;
 using Line_system.Users;
 using NSubstitute;
 using NUnit.Framework;
@@ -13,10 +14,9 @@ namespace NunitTests
         public void Execute_UserInsertesMoney_MoneyInsertedSuccesfully(decimal userMoney, decimal insertMoney)
         {
             // Arrange
-            IUser user = Substitute.For<IUser>(); // TODO: Kan man bruge substitute her?
-            user.Balance = userMoney;
+            IUser user = new User(1,"first", "last", "user", userMoney,"test@test.com"); // TODO: Kan man bruge substitute her?
             InsertCashTransaction insertCashTransaction = new InsertCashTransaction(user, insertMoney);
-            
+
             // Act
             insertCashTransaction.Execute();
             

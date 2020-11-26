@@ -7,13 +7,14 @@ using Line_system.Products;
 using Line_system.Transactions;
 using Line_system.UI;
 using Line_system.Users;
+using Transaction = System.Transactions.Transaction;
 
 namespace Line_system
 {
     public class LineSystem : ILineSystem
     {
         private IEnumerable<IUser> Users { get; set; }
-        private IEnumerable<ITransaction> Transactions { get; set; }
+        private List<ITransaction> Transactions { get; set; } = new List<ITransaction>();
         private IEnumerable<IProduct> Products { get; set; }
 
         public IEnumerable<IProduct> ActiveProducs
@@ -35,7 +36,8 @@ namespace Line_system
         {
             BuyTransaction buyTransaction = new BuyTransaction(user, product);
             ExecuteTransaction(buyTransaction);
-            
+            Transactions.Add(buyTransaction);
+
             return buyTransaction;
         }
 
@@ -43,6 +45,8 @@ namespace Line_system
         {
             InsertCashTransaction insertCashTransaction = new InsertCashTransaction(user, amount);
             ExecuteTransaction(insertCashTransaction);
+            Transactions.Add(insertCashTransaction);
+            
             return insertCashTransaction;
         }
 
@@ -81,11 +85,12 @@ namespace Line_system
             }
         }
 
-        public IEnumerable<ITransaction> GetTransactions(IUser user, int count)
+        public List<ITransaction> GetTransactions(IUser user, int count)
         {
             return Transactions.Where(transaction => transaction.User == user)
                 .OrderBy((transaction => transaction.Date))
-                .Take(count);
+                .Take(count)
+                .ToList();
         }
 
         private IEnumerable<IUser> GetUserData(string filePath, char separator)

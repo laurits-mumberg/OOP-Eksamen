@@ -5,16 +5,16 @@ using Line_system.Users;
 
 namespace Line_system.UI
 {
-    public class LineSystemUI : ILineSystemUI
+    public class LineSystemCLI : ILineSystemUI
     {
         public void DisplayUserNotFound(string username)
         {
             Console.WriteLine($"Could not find a user with the username: {username}");
         }
 
-        public void DisplayProductNotFound(string product)
+        public void DisplayProductNotFound(string messge)
         {
-            Console.WriteLine("Product not found");
+            Console.WriteLine($"Product not found error: {messge}");
         }
 
         public void DisplayUserInfo(IUser user)
@@ -56,6 +56,18 @@ namespace Line_system.UI
         public void DisplayGeneralError(string errorString)
         {
             Console.WriteLine($"Error: {errorString}");
+        }
+
+        public void DisplayTransaction(ITransaction transaction)
+        {
+            if (transaction is InsertCashTransaction insertCashTransaction)
+            {
+                Console.WriteLine($"{insertCashTransaction.User} inserted {insertCashTransaction.Amount}");
+            }
+            else if (transaction is BuyTransaction buyTransaction)
+            {
+                Console.WriteLine($"{buyTransaction.User} bought {buyTransaction.Product}");
+            }
         }
 
         public void Start()

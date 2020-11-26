@@ -5,16 +5,17 @@ using Line_system.Products;
 using Line_system.Transactions;
 using Line_system.UI;
 using Line_system.Users;
+using Transaction = System.Transactions.Transaction;
 
-namespace Line_system.CLI
+namespace Line_system.Controller
 {
-    public class LineSystemCLI
+    public class LineSystemController
     {
         private ILineSystem _lineSystem;
         private ILineSystemUI _lineSystemUi;
         private Dictionary<string, Action<string[]>> _adminCommands = new Dictionary<string, Action<string[]>>();
         
-        public LineSystemCLI(ILineSystem lineSystem, ILineSystemUI lineSystemUi)
+        public LineSystemController(ILineSystem lineSystem, ILineSystemUI lineSystemUi)
         {
             _lineSystem = lineSystem;
             _lineSystemUi = lineSystemUi;
@@ -25,8 +26,8 @@ namespace Line_system.CLI
             _adminCommands.Add(":deactivate", (argv) => lineSystem.GetProductByID(int.Parse(argv[1])).IsActive = false);
             _adminCommands.Add(":crediton", (argv) => lineSystem.GetProductByID(int.Parse(argv[1])).CanBeBoughtOnCredit = true);
             _adminCommands.Add(":creditoff", (argv) => lineSystem.GetProductByID(int.Parse(argv[1])).CanBeBoughtOnCredit = false);
-            _adminCommands.Add(":addcredits", (argv) => new InsertCashTransaction(
-                lineSystem.GetUserByUsername(argv[1]), decimal.Parse(argv[2])).Execute());
+            _adminCommands.Add(":addcredits", (argv) => lineSystem.AddCreditsToAccount(
+                lineSystem.GetUserByUsername(argv[1]), decimal.Parse(argv[2])));
             
             _lineSystemUi.CommandEntered += ParseCommand;
             _lineSystemUi.Start();
@@ -40,7 +41,14 @@ namespace Line_system.CLI
             {
                 if (IsAdminCommand(args))
                 {
-                    _adminCommands[args[0]](args);
+                    try
+                    {
+                        _adminCommands[args[0]](args);
+                    }
+                    catch (KeyNotFoundException e)
+                    {
+                        throw new AdminCommandNotFoundException();
+                    }
 
                 }
                 else
@@ -55,11 +63,31 @@ namespace Line_system.CLI
                     }
                 }
             }
-            catch(Exception e)
+            catch (ProductNotFoundException e)
+            {
+                _lineSystemUi.DisplayProductNotFound(e.Message);
+            }
+            catch (UserNotFoundException e)
+            {
+                _lineSystemUi.DisplayUserNotFound(e.Message);
+            }
+            catch (InsufficientCreditsException e)
+            {
+                _lineSystemUi.DisplayInsufficientCash(_lineSystem.GetUserByUsername(args[0]),
+                    _lineSystem.GetProductByID(int.Parse(args[1])));
+            }
+            catch (AdminCommandNotFoundException e)
+            {
+                _lineSystemUi.DisplayAdminCommandNotFoundMessage(args[0]);
+            }
+            catch (Exception e)
             {
                 _lineSystemUi.DisplayGeneralError(e.Message);
             }
-            _lineSystemUi.Start();
+            finally
+            {
+                _lineSystemUi.Start();
+            }
         }
 
         private bool IsAdminCommand(string[] args)
@@ -69,13 +97,19 @@ namespace Line_system.CLI
 
         private void DisplayUserInfo(string[] args)
         {
-            _lineSystemUi.DisplayUserInfo(_lineSystem.GetUserByUsername(args[0]));
+            IUser user = _lineSystem.GetUserByUsername(args[0]);
+            _lineSystemUi.DisplayUserInfo(user);
+            List<ITransaction> transactions = _lineSystem.GetTransactions(user, 10);
+            
+            foreach (ITransaction transaction in transactions)
+            {
+                _lineSystemUi.DisplayTransaction(transaction);
+            }
         }
         
         private void UserBuyProducts(string[] args)
         {
             IUser user = _lineSystem.GetUserByUsername(args[0]);
-            Console.WriteLine(user);
 
             for (int i = 1; i < args.Length; i++)
             {

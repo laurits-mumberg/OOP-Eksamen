@@ -5,6 +5,7 @@ namespace Line_system
 {
     public class SeasonalProduct : Product
     {
+        public override bool IsActive => (DateTime.Now > SeasonStartDate && DateTime.Now < SeasonEndDate);
         public DateTime SeasonStartDate { get; }
         public DateTime SeasonEndDate { get; }
      

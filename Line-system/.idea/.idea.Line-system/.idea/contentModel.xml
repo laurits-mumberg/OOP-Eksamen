@@ -16,6 +16,7 @@
       <e p="Line-system" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controller" t="Include">
+          <e p="AdminCommandNotFoundException.cs" t="Include" />
           <e p="LineSystemController.cs" t="Include" />
         </e>
         <e p="CsvReading" t="Include">
@@ -73,6 +74,8 @@
             </e>
           </e>
         </e>
+        <e p="SeasonalProductTests.cs" t="Include" />
+        <e p="UserTests.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>

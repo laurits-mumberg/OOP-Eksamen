@@ -12,7 +12,7 @@ namespace Line_system.UI
         public event CommandEventHandler CommandEntered;
         
         void DisplayUserNotFound(string username);
-        void DisplayProductNotFound(string product);
+        void DisplayProductNotFound(string message);
         void DisplayUserInfo(IUser user);
         void DisplayTooManyArgumentsError(string command);
         void DisplayAdminCommandNotFoundMessage(string adminCommand);
@@ -21,6 +21,7 @@ namespace Line_system.UI
         void Close();
         void DisplayInsufficientCash(IUser user, IProduct product);
         void DisplayGeneralError(string errorString);
+        void DisplayTransaction(ITransaction transaction);
         void Start();
     }
 }

@@ -15,7 +15,6 @@ namespace Line_system
         public IProduct GetProductByID(int id);
         public IEnumerable<IUser> GetUsers(Predicate<IUser> predicate);
         public IUser GetUserByUsername(string username);
-        public IEnumerable<ITransaction> GetTransactions(IUser user, int count);
-        // TODO: event LineSystemEvent commandEntered;
+        public List<ITransaction> GetTransactions(IUser user, int count);
     }
 }
