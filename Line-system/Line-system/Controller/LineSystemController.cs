@@ -30,6 +30,7 @@ namespace Line_system.Controller
                 lineSystem.GetUserByUsername(argv[1]), decimal.Parse(argv[2])));
             
             _lineSystemUi.CommandEntered += ParseCommand;
+            lineSystemUi.DisplayAvailableProducts(lineSystem.ActiveProducs.ToList());
             _lineSystemUi.Start();
         }
         

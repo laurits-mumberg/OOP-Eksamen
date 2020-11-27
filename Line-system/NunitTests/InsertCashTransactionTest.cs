@@ -14,7 +14,7 @@ namespace NunitTests
         public void Execute_UserInsertesMoney_MoneyInsertedSuccesfully(decimal userMoney, decimal insertMoney)
         {
             // Arrange
-            IUser user = new User(1,"first", "last", "user", userMoney,"test@test.com"); // TODO: Kan man bruge substitute her?
+            IUser user = new User(1,"first", "last", "user", userMoney,"test@test.com");
             InsertCashTransaction insertCashTransaction = new InsertCashTransaction(user, insertMoney);
 
             // Act

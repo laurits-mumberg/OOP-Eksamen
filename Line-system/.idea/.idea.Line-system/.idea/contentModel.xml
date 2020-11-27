@@ -65,6 +65,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="BuyProductTests.cs" t="Include" />
         <e p="InsertCashTransactionTest.cs" t="Include" />
+        <e p="LineSystemControllerTests.cs" t="Include" />
         <e p="LineSystemTest.cs" t="Include" />
         <e p="NunitTests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">

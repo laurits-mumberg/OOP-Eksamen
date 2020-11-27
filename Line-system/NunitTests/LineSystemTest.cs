@@ -6,12 +6,6 @@ namespace NunitTests
 {
     public class LineSystemTest
     {
-        [SetUp]
-        public void Setup()
-        {
-
-        }
-        
         [TestCase("ndavo", true)]
         [TestCase("afull", true)]
         public void GetTransactions_TransactionsExist_FilterAndReturnSuccessfully(string username, bool exists)

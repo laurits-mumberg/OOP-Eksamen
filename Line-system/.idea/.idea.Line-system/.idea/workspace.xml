@@ -23,7 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b16221-f57d-4424-bb9f-b4b1d91e6dbc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Data/transactions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NunitTests/LineSystemControllerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Line-system/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/Controller/LineSystemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Controller/LineSystemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/Products/IProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Products/IProduct.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/Transactions/BuyTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Transactions/BuyTransaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/Transactions/InsertCashTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Transactions/InsertCashTransaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/Transactions/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/Transactions/Transaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Line-system/UI/LineSystemCLI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Line-system/UI/LineSystemCLI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NunitTests/LineSystemTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NunitTests/LineSystemTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +57,6 @@
         <option value="$PROJECT_DIR$/Line-system/ITransaction.cs" />
         <option value="$PROJECT_DIR$/Line-system/Transaction.cs" />
         <option value="$PROJECT_DIR$/NunitTests/UnitTest1.cs" />
-        <option value="$PROJECT_DIR$/Line-system/Transactions/Transaction.cs" />
         <option value="$PROJECT_DIR$/NunitTests/BuyProductTests.cs" />
         <option value="$PROJECT_DIR$/NunitTests/GetTransactions.cs" />
         <option value="$PROJECT_DIR$/Line-system/Transactions/ITransaction.cs" />
@@ -56,7 +66,6 @@
         <option value="$PROJECT_DIR$/Line-system/CsvReading/UserReadStrategy.cs" />
         <option value="$PROJECT_DIR$/Line-system/CsvReading/CsvReaderContext.cs" />
         <option value="$PROJECT_DIR$/Line-system/UI/LineSystemUI.cs" />
-        <option value="$PROJECT_DIR$/Line-system/Transactions/InsertCashTransaction.cs" />
         <option value="$PROJECT_DIR$/Line-system/CLI/LineSystemCLI.cs" />
         <option value="$PROJECT_DIR$/Line-system/Users/IUser.cs" />
         <option value="$PROJECT_DIR$/Line-system/Transactions/InsufficientCreditsException.cs" />
@@ -65,13 +74,10 @@
         <option value="$PROJECT_DIR$/Line-system/Users/UserNotFoundException.cs" />
         <option value="$PROJECT_DIR$/Line-system/Products/ProductNotFoundException.cs" />
         <option value="$PROJECT_DIR$/Line-system/Products/ProductNotActiveException.cs" />
-        <option value="$PROJECT_DIR$/Line-system/Transactions/BuyTransaction.cs" />
-        <option value="$PROJECT_DIR$/NunitTests/LineSystemTest.cs" />
         <option value="$PROJECT_DIR$/Line-system/Controller/AdminCommandNotFoundException.cs" />
         <option value="$PROJECT_DIR$/Line-system/Program.cs" />
         <option value="$PROJECT_DIR$/NunitTests/LineSystemController.cs" />
         <option value="$PROJECT_DIR$/Line-system/Products/SeasonalProduct.cs" />
-        <option value="$PROJECT_DIR$/Line-system/Products/IProduct.cs" />
         <option value="$PROJECT_DIR$/Line-system/Products/Product.cs" />
         <option value="$PROJECT_DIR$/NunitTests/LineSystemTests.cs" />
         <option value="$PROJECT_DIR$/NunitTests/SeasonalProductTests.cs" />
@@ -79,11 +85,17 @@
         <option value="$PROJECT_DIR$/NunitTests/InsertCashTransactionTest.cs" />
         <option value="$PROJECT_DIR$/NunitTests/UserTests.cs" />
         <option value="$PROJECT_DIR$/Line-system/Users/User.cs" />
-        <option value="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" />
         <option value="$PROJECT_DIR$/Line-system/ILineSystem.cs" />
-        <option value="$PROJECT_DIR$/Line-system/UI/LineSystemCLI.cs" />
         <option value="$PROJECT_DIR$/Line-system/LineSystem.cs" />
+        <option value="$PROJECT_DIR$/Line-system/UI/ILineSystemUI.cs" />
         <option value="$PROJECT_DIR$/Line-system/Controller/LineSystemController.cs" />
+        <option value="$PROJECT_DIR$/Line-system/UI/LineSystemCLI.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Products/IProduct.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Transactions/InsertCashTransaction.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Transactions/BuyTransaction.cs" />
+        <option value="$PROJECT_DIR$/Line-system/Transactions/Transaction.cs" />
+        <option value="$PROJECT_DIR$/NunitTests/LineSystemControllerTests.cs" />
+        <option value="$PROJECT_DIR$/NunitTests/LineSystemTest.cs" />
       </list>
     </option>
   </component>
@@ -144,11 +156,46 @@
       <workItem from="1606336467305" duration="2550000" />
       <workItem from="1606390921913" duration="12995000" />
       <workItem from="1606416514207" duration="5536000" />
+      <workItem from="1606466832651" duration="10528000" />
+      <workItem from="1606490383766" duration="706000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="229" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 55% 229/509" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 55% 229/509" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Line-system 48% 229/442" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 55% 229/509" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Line-system 48% 229/442" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Line_system 48% 229/442" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 55% 229/509" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Line-system 48% 229/442" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Line_system 48% 229/442" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="LineSystem 50% 32/64" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -168,26 +215,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1606425800526">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="258" key="GridCell.Tab.0.bottom" timestamp="1606483677572">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606416493563" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606425800526" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1606425800526">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606483677572" />
+    <state width="1877" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606468820535" />
+    <state width="1877" height="258" key="GridCell.Tab.0.center" timestamp="1606483677572">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606416493563" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606425800526" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1606425800525">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="258" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606483677572" />
+    <state width="1877" height="261" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606468820535" />
+    <state width="1877" height="258" key="GridCell.Tab.0.left" timestamp="1606483677572">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606416493563" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606425800525" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1606425800526">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="258" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606483677572" />
+    <state width="1877" height="261" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606468820535" />
+    <state width="1877" height="258" key="GridCell.Tab.0.right" timestamp="1606483677572">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606416493563" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606425800526" />
+    <state width="1877" height="258" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1606483677572" />
+    <state width="1877" height="261" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606468820535" />
     <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1606425800526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

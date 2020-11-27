@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Line_system.Products;
 using Line_system.Transactions;
 using Line_system.Users;
@@ -44,7 +45,8 @@ namespace Line_system.UI
 
         public void Close()
         {
-            Console.WriteLine("Should close program");// TODO: Luk lortet
+            Console.WriteLine("Shutindg down program");
+            Environment.Exit(0);
         }
 
         public void DisplayInsufficientCash(IUser user, IProduct product)
@@ -70,8 +72,18 @@ namespace Line_system.UI
             }
         }
 
+        public void DisplayAvailableProducts(List<IProduct> products)
+        {
+            Console.WriteLine("Available products:");
+            foreach (IProduct product in products)
+            {
+                Console.WriteLine(product);
+            }
+        }
+
         public void Start()
         {
+            Console.WriteLine("------------------");
             Console.WriteLine("Write a command:");
             string command = Console.ReadLine();
             CommandEntered?.Invoke(command);

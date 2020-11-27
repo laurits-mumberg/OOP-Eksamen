@@ -7,9 +7,8 @@ namespace Line_system.Transactions
     public class BuyTransaction : Transaction
 
     {
-        public IProduct Product { get; set; }
+        public IProduct Product { get; }
         
-        // TODO: Fix
         public BuyTransaction(IUser user, IProduct product) : base(user, product.Price * -1)
         {
             Product = product;
@@ -23,6 +22,7 @@ namespace Line_system.Transactions
                 if (User.Balance - Product.Price >= 0 || Product.CanBeBoughtOnCredit)
                 {
                     User.Balance -= Product.Price;
+                    SaveToFile($"{ID},{User},{Date},{Amount},{Product}");
                 }
                 else
                 {

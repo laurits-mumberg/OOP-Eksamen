@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Line_system.Products;
 using Line_system.Transactions;
 using Line_system.Users;
@@ -22,6 +23,7 @@ namespace Line_system.UI
         void DisplayInsufficientCash(IUser user, IProduct product);
         void DisplayGeneralError(string errorString);
         void DisplayTransaction(ITransaction transaction);
+        void DisplayAvailableProducts(List<IProduct> products);
         void Start();
     }
 }
